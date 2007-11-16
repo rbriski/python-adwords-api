@@ -105,7 +105,12 @@ class AdWordsClient(object):
 
       #Quack, quack: duck typing
       if not hasattr(out, 'reverse'):
+        if not hasattr(out, 'id'):
+          #Empty return? Return an empty list
+          return []
+        #Single return element? Return it in a list
         return [out]
+      #Otherwise, it must already be a list
       return out
     return returnList
     
