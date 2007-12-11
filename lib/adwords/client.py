@@ -42,7 +42,7 @@ class AdWordsClient(object):
                user_agent=None,
                client_email=None,
                server='https://adwords.google.com',
-               version='v10',
+               version='v11',
                cache_dir='/tmp'):
     """ Creates a client object
     
