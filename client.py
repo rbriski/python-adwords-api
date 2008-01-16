@@ -148,6 +148,9 @@ class AdWordsClient(object):
     if wsdl:
       #Build the cache dir
       cachedLoc = os.path.join(self.cache_dir, serviceBranch)
+      if sys.platform[:3] == 'win':
+        cachedLoc = cachedLoc.replace('?', '.')
+        
       distutils.dir_util.mkpath(os.path.dirname(cachedLoc))
 
       #Always returns the cached version, but if cached is False
