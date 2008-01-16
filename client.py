@@ -9,7 +9,7 @@
    AdWordsClient: Encapsulates all AdWords services and headers
 """
 
-import os
+import os, sys
 import distutils.dir_util
 import urllib
 import SOAPpy
